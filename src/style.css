@@ -842,7 +842,7 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 }
- 
+
 @media (max-width: 768px) {
   .hero-content p {
     font-size: 2.5rem;
