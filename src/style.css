@@ -844,7 +844,7 @@ a {
 }
 
 @media (max-width: 768px) {
-  .hero-content h1 {
+  .hero-content p {
     font-size: 2.5rem;
   }
   
