@@ -60,7 +60,11 @@
   <!-- Hero Section -->
   <section id="inicio" class="hero">
     <div class="hero-bg">
-      <img src="/hombre-corbata.webp" alt="Conductor profesional" />
+      <picture>
+        <source media="(max-width: 768px)" srcset="/hombre-corbata-mobile.webp">
+        <source media="(max-width: 1200px)" srcset="/hombre-corbata.webp">
+        <img src="/hombre-corbata.webp" alt="Conductor profesional" />
+      </picture>
       <div class="hero-overlay"></div>
     </div>
 
