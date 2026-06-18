@@ -1,332 +1,593 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Especiales Zutagaos - Transporte Especial Seguro</title>
+    <meta
+      name="description"
+      content="Transporte Especial en Fusagasugá Seguro y Confiable para Cada Necesidad, somos una empresa de transporte dedicada a la movilidad de pasajeros, con calidad y un servicio garantizado. "
+    />
+    <meta
+      name="keywords"
+      content="Transporte Especial, Transporte Seguro, Transporte Turístico, Transporte Empresarial, Transporte Escolar, Especiales Zutagao"
+    />
+    <meta name="author" content="Especiales Zutagao S.A.S." />
+    <link rel="icon" type="image/jpg" href="/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome cargado asíncronamente para mejorar LCP -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+    </noscript>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Especiales Zutagao - Transporte Especial Seguro</title>
-  <meta name="description"
-    content="Transporte Especial en Fusagasugá Seguro y Confiable para Cada Necesidad, somos una empresa de transporte dedicada a la movilidad de pasajeros, con calidad y un servicio garantizado. ">
-  <meta name="keywords"
-    content="Transporte Especial, Transporte Seguro, Transporte Turístico, Transporte Empresarial, Transporte Escolar, Especiales Zutagao">
-  <meta name="author" content="Especiales Zutagao S.A.S.">
-  <link rel="icon" type="image/jpg" href="/logo.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-  <!-- Font Awesome cargado asíncronamente para mejorar LCP -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </noscript>
-  <link rel="stylesheet" href="/src/style.css">
-</head>
-
-<body>
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/573142609229?text=" class="floating-whatsapp" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo">
-        <a href="#inicio" aria-label="Especiales Zutagao - Ir al inicio">
-          <img src="/logo.jpg" alt="Logo de Especiales Zutagao S.A.S." width="65px">
-        </a>
-      </div>
-
-      <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <nav class="nav-links" id="nav-links">
-        <a href="#inicio" class="active">Inicio</a>
-        <a href="#quienes-somos">¿Quiénes Somos?</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#politica">Políticas de calidad</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/573142609229?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20viaje.%20%C2%BFPueden%20ayudarme%3F"
-          target="_blank" class="btn btn-primary nav-cta">Cotizar Viaje</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="inicio" class="hero">
-    <div class="hero-bg">
-      <picture>
-        <source media="(max-width: 768px)" srcset="/hombre-corbata-mobile.webp">
-        <source media="(max-width: 1200px)" srcset="/hombre-corbata.webp">
-        <img src="/hombre-corbata.webp" alt="Conductor profesional" />
-      </picture>
-      <div class="hero-overlay"></div>
+  <body>
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp-container">
+      <a
+        href="https://wa.me/573114828514?text="
+        class="floating-whatsapp"
+        target="_blank"
+        aria-label="WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <p>Contacto comercial y cotizaciones</p>
+      </a>
+      <a
+        href="https://wa.me/573142609229?text="
+        class="floating-whatsapp floating-whatsapp-2"
+        target="_blank"
+        aria-label="WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <p>Area General</p>
+      </a>
     </div>
 
-    <div class="container hero-content">
-      <p class="subtitle">TRANSPORTE ESPECIAL SEGURO Y CONFIABLE PARA CADA NECESIDAD</p>
-      <h1 style="display: none;">Empresa de Transporte en Fusagasugá, viajes seguros y confiables</h1>
-      <p>Transporte especial seguro y confiable<br><span>para cada necesidad</span></p>
-      <a href="https://wa.me/573142609229?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20viaje.%20%C2%BFPueden%20ayudarme%3F"
-        target="_blank" class="btn btn-primary btn-large">Cotizar Viaje</a>
-    </div>
-
-
-  </section>
-
-  <!-- Who We Are Section -->
-  <section id="quienes-somos" class="about-section">
-    <div class="container about-container">
-      <div class="about-image-wrapper">
-        <img src="/quienes-somos.webp" alt="Nuestro Equipo" class="about-image">
-      </div>
-      <div class="about-content">
-        <h2>Quiénes Somos</h2>
-        <p><strong>Especiales Zutagao S.A.S.</strong> somos una empresa de transporte dedicada a la movilidad de
-          pasajeros, con calidad y un servicio garantizado. Estamos en capacidad de brindarle una amplia gama de
-          soluciones, adaptadas a todas y cada una de sus necesidades con vehículos especiales de vanguardia y con altas
-          consideraciones y exigencias para el confort y la seguridad de todos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="servicios" class="services-section">
-    <div class="container">
-      <div class="services-header">
-        <h2>Somos expertos y <br><span>brindamos los<br>mejores servicios</span></h2>
-        <p>En Especiales Zutagao S.A.S. te brindamos un portafolio de transporte para suplir todas tus necesidades de
-          movilidad.<br>¡Acércate a disfrutar de un viaje seguro, placentero y de atención
-          personalizada,<br>garantizamos su satisfacción en todo momento!</p>
-        <div class="social-icons-small">
-          <a href="https://www.facebook.com/people/Especiales-Zutagaos-SAS/100092862321317/"
-            aria-label="Visitar Facebook de Especiales Zutagao" target="_blank" rel="noopener"><i
-              class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/especiales_zutagaos/" aria-label="Visitar Instagram de Especiales Zutagao"
-            target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/especiales-zutagaos-sas-18a90437a/"
-            aria-label="Visitar LinkedIn de Especiales Zutagao" target="_blank" rel="noopener"><i
-              class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div class="services-grid">
-        <!-- Service Card 1 -->
-        <div class="service-card">
-          <picture>
-            <source media="(max-width: 768px)" srcset="/transporte-escolar-mobile.webp">
-            <source media="(max-width: 1200px)" srcset="/transporte-escolar.webp">
-            <img src="/transporte-escolar.webp" alt="Transporte escolar">
-          </picture>
-          <div class="service-overlay">
-            <h3>Transporte escolar seguro y confiable</h3>
-            <a href="https://wa.me/573142609229?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Transporte%20Escolar%20seguro%20y%20confiable.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
-              target="_blank" rel="noopener" class="btn btn-secondary"
-              aria-label="Consultar servicio de Transporte Escolar por WhatsApp">Consultar <i
-                class="fas fa-chevron-right" aria-hidden="true"></i></a>
-          </div>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="#inicio" aria-label="Especiales Zutagao - Ir al inicio">
+            <img
+              src="/logo.jpg"
+              alt="Logo de Especiales Zutagao S.A.S."
+              width="85px"
+            />
+          </a>
         </div>
 
-        <!-- Service Card 2 -->
-        <div class="service-card">
-          <img src="/traslados-empresariales.webp" alt="Traslados empresariales">
-          <div class="service-overlay">
-            <h3>Traslados empresariales eficientes</h3>
-            <a href="https://wa.me/573142609229?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Traslados%20Empresariales.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
-              target="_blank" rel="noopener" class="btn btn-secondary"
-              aria-label="Consultar servicio de Traslados Empresariales por WhatsApp">Consultar <i
-                class="fas fa-chevron-right" aria-hidden="true"></i></a>
-          </div>
-        </div>
+        <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
 
-        <!-- Service Card 3 -->
-        <div class="service-card">
-          <img src="/traslados-medicos.webp" alt="Traslados médicos">
-          <div class="service-overlay">
-            <h3>Traslados médicos/ambulatorios</h3>
-            <a href="https://wa.me/573142609229?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Traslados%20M%C3%A9dicos%20y%20Ambulatorios.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
-              target="_blank" rel="noopener" class="btn btn-secondary"
-              aria-label="Consultar servicio de Traslados Médicos y Ambulatorios por WhatsApp">Consultar <i
-                class="fas fa-chevron-right" aria-hidden="true"></i></a>
-          </div>
-        </div>
+        <nav class="nav-links" id="nav-links">
+          <a href="#inicio" class="active">Inicio</a>
+          <a href="#quienes-somos">¿Quiénes Somos?</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#politica">Políticas de calidad</a>
+          <a href="#contacto">Contacto</a>
+          <a
+            href="https://wa.me/573142609229?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20viaje.%20%C2%BFPueden%20ayudarme%3F"
+            target="_blank"
+            class="btn btn-primary nav-cta"
+            >Cotizar Viaje</a
+          >
+          <a
+            href="https://www.especialeszutagaos.com/control/index.php"
+            target="_blank"
+            class="btn btn-secondary nav-cta"
+            >Generar FUEC</a
+          >
+        </nav>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Divider Banner -->
-  <section class="banner-divider">
-    <div class="banner-overlay"></div>
-    <div class="container text-center">
-      <h2>TU DESTINO SEGURO, NUESTRO<br>COMPROMISO</h2>
-    </div>
-  </section>
-
-  <!-- Quality Policy -->
-  <section id="politica" class="quality-section">
-    <div class="container quality-container">
-      <div class="quality-card">
-        <div class="badge-icon"><i class="fas fa-award"></i></div>
-        <h3>Política de calidad</h3>
-        <p>Garantizamos un servicio seguro, responsable y de calidad. Nos destacamos con nuestra misión y valores, un
-          pilar que nos representa.</p>
-      </div>
-      <div class="quality-image-wrapper">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg">
         <picture>
-          <source media="(max-width: 768px)" srcset="/calidad-mobile.webp">
-          <source media="(max-width: 1200px)" srcset="/calidad.webp">
-          <img src="/calidad.webp" alt="Especiales Zutagao S.A.S Headquarters" class="quality-image">
+          <source
+            media="(max-width: 768px)"
+            srcset="/hombre-corbata-mobile.webp"
+          />
+          <source media="(max-width: 1200px)" srcset="/hombre-corbata.webp" />
+          <img src="/hombre-corbata.webp" alt="Conductor profesional" />
         </picture>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Team -->
-  <section class="team-section">
-    <div class="container" style="max-width:100vw;">
-      <div class="team-header">
-        <h2>Nuestro Equipo</h2>
-        <p>Somos un equipo de profesionales, personas responsables con vocación de servicio y de servicio. En Especiales
-          Zutagao S.A.S. contamos con un grupo humano altamente calificado en distintas áreas dispuestas a su servicio
-          de calidad. Reconocido personal con gran vocación y gran sentido de pertenencia por lo que le aporta a su
-          bienestar y comodidad.</p>
+        <div class="hero-overlay"></div>
       </div>
 
-      <div class="team-carousel">
-        <!-- Team Member 1 -->
-        <div class="team-member">
-          <div class="member-frame">
-            <picture>
-              <source media="(max-width: 768px)" srcset="/photo-ceo-mobile.webp">
-              <source media="(max-width: 1200px)" srcset="/photo-ceo.webp">
-              <img src="/photo-ceo.webp" alt="CEO de Especiales Zutagao S.A.S.">
-            </picture>
-            <div class="member-overlay">
-              <span class="member-role">CEO</span>
-            </div>
-            <div class="gold-border"></div>
-          </div>
-        </div>
-
-        <!-- Team Member 2 -->
-        <div class="team-member">
-          <div class="member-frame">
-            <picture>
-              <source media="(max-width: 768px)" srcset="/photo-juan-mobile.webp">
-              <source media="(max-width: 1200px)" srcset="/photo-juan.webp">
-              <img src="/photo-juan.webp" alt="Asesor Jurídico de Especiales Zutagao S.A.S.">
-            </picture>
-            <div class="member-overlay">
-              <span class="member-role">Juridico</span>
-            </div>
-            <div class="gold-border"></div>
-          </div>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="team-member">
-          <div class="member-frame">
-            <picture>
-              <source media="(max-width: 768px)" srcset="/photo-admin-mobile.webp">
-              <source media="(max-width: 1200px)" srcset="/photo-admin.webp">
-              <img src="/photo-admin.webp" alt="Auxiliar Contable de Especiales Zutagao S.A.S.">
-            </picture>
-            <div class="member-overlay">
-              <span class="member-role">Auxiliar Contable</span>
-            </div>
-            <div class="gold-border"></div>
-          </div>
-        </div>
-
-        <div class="team-member">
-          <div class="member-frame">
-            <picture>
-              <source media="(max-width: 768px)" srcset="/photo-admin2-mobile.webp">
-              <source media="(max-width: 1200px)" srcset="/photo-admin2.webp">
-              <img src="/photo-admin2.webp" alt="Auxiliar Contable de Especiales Zutagao S.A.S.">
-            </picture>
-            <div class="member-overlay">
-              <span class="member-role">Auxiliar Contable</span>
-            </div>
-            <div class="gold-border"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Clients -->
-  <section class="clients-section">
-    <div class="container text-center">
-      <h2 class="section-title-gold">NUESTROS CLIENTES</h2>
-      <p class="clients-subtitle">Toda la confianza de renombre que usan nuestros productos</p>
-
-      <div class="clients-logo-slider">
-        <div class="logos-track">
-          <div class="logo-item"><img src="/hsanrafaellogo.jpg" alt="Hospital San Rafael" class="client-logo">
-          </div>
-          <div class="logo-item"><img src="/acarLogo.png" alt="Acar Logística" class="client-logo"></div>
-          <div class="logo-item"><img src="/ruta40logo.jpg" alt="Ruta 40" class="client-logo"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contacto" class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="/logo.jpg" alt="Logo de Especiales Zutagao S.A.S." width="65px">
-      </div>
-
-      <div class="footer-info">
-        <h4>Inicio</h4>
-        <p>Especiales Zutagao S.A.S.</p>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/people/Especiales-Zutagaos-SAS/100092862321317/"
-            aria-label="Visitar Facebook de Especiales Zutagao" target="_blank" rel="noopener"><i
-              class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/especiales_zutagaos/" aria-label="Visitar Instagram de Especiales Zutagao"
-            target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/especiales-zutagaos-sas-18a90437a/"
-            aria-label="Visitar LinkedIn de Especiales Zutagao" target="_blank" rel="noopener"><i
-              class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contáctenos</h4>
-        <p>Carrera 11 #21-75
-          Fusagasugá - CP 252212</p>
-        <p class="contact-links">
-          <a href="tel:+573142609229"><i class="fas fa-phone-alt"></i> +57 314 260 9229</a><br>
-          <a href="mailto:gerencia@especialeszutagaos.com.co"><i class="fas fa-envelope"></i>
-            gerencia@especialeszutagaos.com.co</a>
+      <div class="container hero-content">
+        <p class="subtitle">
+          TRANSPORTE ESPECIAL SEGURO Y CONFIABLE PARA CADA NECESIDAD
         </p>
+        <h1 style="display: none">
+          Empresa de Transporte en Fusagasugá, viajes seguros y confiables
+        </h1>
+        <p>
+          Transporte especial seguro y confiable<br /><span
+            >para cada necesidad</span
+          >
+        </p>
+        <a
+          href="https://wa.me/573142609229?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20viaje.%20%C2%BFPueden%20ayudarme%3F"
+          target="_blank"
+          class="btn btn-primary btn-large"
+          >Cotizar Viaje</a
+        >
       </div>
+    </section>
 
-      <div class="footer-hours">
-        <h4>Horario</h4>
-        <p>Lunes a Viernes de 8:00am a 6:00pm<br>
-          Sábados de 8:00am a 12:00pm</p>
-        <p>atención de domingos y festivos por medio de nuestra línea de WhatsApp</p>
+    <!-- Who We Are Section -->
+    <section id="quienes-somos" class="about-section">
+      <div class="container about-container">
+        <div class="about-image-wrapper">
+          <img src="/galery2.JPG" alt="Nuestro Equipo" class="about-image" />
+        </div>
+        <div class="about-content">
+          <h2>Quiénes Somos</h2>
+          <p style="text-align: justify">
+            <strong>Especiales Zutagao S.A.S.</strong> somos una empresa de
+            transporte dedicada a la movilidad de pasajeros, con calidad y un
+            servicio garantizado. Estamos en capacidad de brindarle una amplia
+            gama de soluciones, adaptadas a todas y cada una de sus necesidades
+            con vehículos especiales de vanguardia y con altas consideraciones y
+            exigencias para el confort y la seguridad de todos.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
-        <p>&copy; 2026 Especiales Zutagao S.A.S. Todos los derechos reservados.</p>
-        <p>Diseñado con <i class="fas fa-heart"></i></p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services-section">
+      <div class="container">
+        <div class="services-header">
+          <div class="services-main">
+            <h2>
+              Somos expertos y <span>brindamos los<br />mejores servicios</span>
+            </h2>
+            <p style="text-align: justify">
+              En Especiales Zutagao S.A.S. te brindamos un portafolio de
+              transporte para suplir todas tus necesidades de movilidad.<br />¡Acércate
+              a disfrutar de un viaje seguro, placentero y de atención
+              personalizada,<br />garantizamos su satisfacción en todo momento!
+            </p>
+          </div>
+          <div class="social-icons-small">
+            <a
+              href="https://www.facebook.com/people/Especiales-Zutagaos-SAS/100092862321317/"
+              aria-label="Visitar Facebook de Especiales Zutagao"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-facebook-f" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/especiales_zutagaos/"
+              aria-label="Visitar Instagram de Especiales Zutagao"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/especiales-zutagaos-sas-18a90437a/"
+              aria-label="Visitar LinkedIn de Especiales Zutagao"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service Card 1 -->
+          <div class="service-card">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="/transporte-escolar-mobile.webp"
+              />
+              <source
+                media="(max-width: 1200px)"
+                srcset="/transporte-escolar.webp"
+              />
+              <img src="/escolar.JPG" alt="Transporte escolar" />
+            </picture>
+            <div class="service-overlay">
+              <h3>Transporte escolar seguro y confiable</h3>
+              <a
+                href="https://wa.me/573142609229?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Transporte%20Escolar%20seguro%20y%20confiable.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-secondary"
+                aria-label="Consultar servicio de Transporte Escolar por WhatsApp"
+                >Consultar
+                <i class="fas fa-chevron-right" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card">
+            <img src="/empresarial.JPG" alt="Traslados empresariales" />
+            <div class="service-overlay">
+              <h3>Traslados empresariales eficientes</h3>
+              <a
+                href="https://wa.me/573142609229?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Traslados%20Empresariales.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-secondary"
+                aria-label="Consultar servicio de Traslados Empresariales por WhatsApp"
+                >Consultar
+                <i class="fas fa-chevron-right" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card">
+            <img src="/ambulatorio.JPG" alt="Traslados médicos" />
+            <div class="service-overlay">
+              <h3>Traslados médicos/ambulatorios</h3>
+              <a
+                href="https://wa.me/573142609229?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Traslados%20M%C3%A9dicos%20y%20Ambulatorios.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-secondary"
+                aria-label="Consultar servicio de Traslados Médicos y Ambulatorios por WhatsApp"
+                >Consultar
+                <i class="fas fa-chevron-right" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="/turismo.JPG" alt="Turismo y recreación" />
+            <div class="service-overlay">
+              <h3>Turismo y recreación</h3>
+              <a
+                href="https://wa.me/573142609229?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Turismo%20y%20Recreaci%C3%B3n.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-secondary"
+                aria-label="Consultar servicio de Traslados Médicos y Ambulatorios por WhatsApp"
+                >Consultar
+                <i class="fas fa-chevron-right" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script type="module" src="/src/main.js"></script>
-</body>
+    <!-- Divider Banner -->
+    <section class="banner-divider">
+      <div class="banner-overlay"></div>
+      <div class="container text-center">
+        <h2>TU DESTINO SEGURO, NUESTRO<br />COMPROMISO</h2>
+      </div>
+    </section>
 
+    <!-- Quality Policy -->
+    <section id="politica" class="quality-section">
+      <div class="container quality-container">
+        <div class="quality-card">
+          <div class="badge-icon"><i class="fas fa-award"></i></div>
+          <h3>Política de calidad</h3>
+          <p>
+            Garantizamos un servicio seguro, responsable y de calidad. Nos
+            destacamos con nuestra misión y valores, un pilar que nos
+            representa.
+          </p>
+        </div>
+        <div class="quality-image-wrapper">
+          <picture>
+            <source media="(max-width: 768px)" srcset="/calidad-mobile.webp" />
+            <source media="(max-width: 1200px)" srcset="/calidad.webp" />
+            <img
+              src="/calidad.webp"
+              alt="Especiales Zutagao S.A.S Headquarters"
+              class="quality-image"
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="quality-isos">
+        <img
+          width="300"
+          src="https://insades.com/wp-content/uploads/2021/07/iso-9001jpg-1.jpg.webp"
+          alt=""
+        />
+        <img
+          width="300"
+          src="https://sqm-ynv.com/wp-content/uploads/2021/05/iso14001.jpg"
+          alt=""
+        />
+        <img width="300" src="/ISO-39001.webp" alt="" />
+        <img
+          width="300"
+          src="https://img.interempresas.net/fotos/1737510.jpeg"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="team-section">
+      <div class="container" style="max-width: 100vw">
+        <div class="team-header">
+          <h2>Nuestro Equipo</h2>
+          <p>
+            Somos un equipo de profesionales, personas responsables con vocación
+            de servicio y de servicio. En Especiales Zutagao S.A.S. contamos con
+            un grupo humano altamente calificado en distintas áreas dispuestas a
+            su servicio de calidad. Reconocido personal con gran vocación y gran
+            sentido de pertenencia por lo que le aporta a su bienestar y
+            comodidad.
+          </p>
+        </div>
+
+        <div class="team-carousel">
+          <!-- Team Member 1 -->
+          <div class="team-member">
+            <div class="member-frame">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/photo-ceo-mobile.webp"
+                />
+                <source media="(max-width: 1200px)" srcset="/photo-ceo.webp" />
+                <img
+                  src="/photo-ceo.webp"
+                  alt="CEO de Especiales Zutagao S.A.S."
+                />
+              </picture>
+              <div class="member-overlay">
+                <span class="member-role">CEO</span>
+              </div>
+              <div class="gold-border"></div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-member">
+            <div class="member-frame">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/photo-juan-mobile.webp"
+                />
+                <source media="(max-width: 1200px)" srcset="/photo-juan.webp" />
+                <img
+                  src="/photo-juan.webp"
+                  alt="Asesor Jurídico de Especiales Zutagao S.A.S."
+                />
+              </picture>
+              <div class="member-overlay">
+                <span class="member-role">Juridico</span>
+              </div>
+              <div class="gold-border"></div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-member">
+            <div class="member-frame">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/photo-admin-mobile.webp"
+                />
+                <source
+                  media="(max-width: 1200px)"
+                  srcset="/photo-admin.webp"
+                />
+                <img
+                  src="/photo-admin.webp"
+                  alt="Auxiliar Contable de Especiales Zutagao S.A.S."
+                />
+              </picture>
+              <div class="member-overlay">
+                <span class="member-role">Auxiliar Contable</span>
+              </div>
+              <div class="gold-border"></div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-frame">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/photo-admin2-mobile.webp"
+                />
+                <source
+                  media="(max-width: 1200px)"
+                  srcset="/photo-admin2.webp"
+                />
+                <img
+                  src="/photo-admin2.webp"
+                  alt="Auxiliar Contable de Especiales Zutagao S.A.S."
+                />
+              </picture>
+              <div class="member-overlay">
+                <span class="member-role">Auxiliar Contable</span>
+              </div>
+              <div class="gold-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients-section">
+      <div class="container text-center">
+        <h2 class="section-title-gold">NUESTROS CLIENTES</h2>
+        <p class="clients-subtitle">
+          Toda la confianza de renombre que usan nuestros productos
+        </p>
+
+        <div class="clients-logo-slider">
+          <div class="logos-track">
+            <div class="logo-item">
+              <img
+                src="/hsanrafaellogo.jpg"
+                alt="Hospital San Rafael"
+                class="client-logo"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="/acarLogo.png"
+                alt="Acar Logística"
+                class="client-logo"
+              />
+            </div>
+            <div class="logo-item">
+              <img src="/ruta40logo.jpg" alt="Ruta 40" class="client-logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery-section">
+      <div class="container">
+        <h2 class="section-title-gold">Galería</h2>
+        <p class="clients-subtitle">
+          Conoce nuestras unidades y equipo de trabajo
+        </p>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="/galery1.JPG" alt="Unidad 1" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="/galery2.JPG" alt="Unidad 2" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="/galery3.JPG" alt="Unidad 3" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="/galery4.JPG" alt="Unidad 4" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="/galery5.JPG" alt="Unidad 5" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicle 0km Section -->
+    <section id="vehiculo-0km" class="vehicle-section">
+      <div class="container vehicle-container">
+        <div class="vehicle-content">
+          <h2 class="section-title-gold">
+            Adquiere tu vehículo 0km con nosotros
+          </h2>
+          <p>
+            Te ofrecemos las mejores opciones para adquirir tu vehículo nuevo
+            con financiamiento y asesoría personalizada.
+          </p>
+        </div>
+        <div class="vehicle-image">
+          <img src="/IMG_2579.jpg" alt="Vehículo 0km" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img
+            src="/logo.jpg"
+            alt="Logo de Especiales Zutagao S.A.S."
+            width="65px"
+          />
+        </div>
+
+        <div class="footer-info">
+          <h4>Inicio</h4>
+          <p>Especiales Zutagao S.A.S.</p>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/people/Especiales-Zutagaos-SAS/100092862321317/"
+              aria-label="Visitar Facebook de Especiales Zutagao"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-facebook-f" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/especiales_zutagaos/"
+              aria-label="Visitar Instagram de Especiales Zutagao"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/especiales-zutagaos-sas-18a90437a/"
+              aria-label="Visitar LinkedIn de Especiales Zutagao"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contáctenos</h4>
+          <p>Carrera 11 #21-75 Fusagasugá - CP 252212</p>
+          <p class="contact-links">
+            <a href="tel:+573142609229"
+              ><i class="fas fa-phone-alt"></i> +57 314 260 9229</a
+            ><br />
+            <a href="mailto:gerencia@especialeszutagaos.com.co"
+              ><i class="fas fa-envelope"></i>
+              gerencia@especialeszutagaos.com.co</a
+            >
+          </p>
+        </div>
+
+        <div class="footer-hours">
+          <h4>Horario</h4>
+          <p>
+            Lunes a Viernes de 8:00am a 6:00pm<br />
+            Sábados de 8:00am a 12:00pm
+          </p>
+          <p>
+            atención de domingos y festivos por medio de nuestra línea de
+            WhatsApp
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <p>
+            &copy; 2026 Especiales Zutagao S.A.S. Todos los derechos reservados.
+          </p>
+          <p>Diseñado con <i class="fas fa-heart"></i></p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
