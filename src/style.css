@@ -857,12 +857,14 @@ a {
 
 .vehicle-content {
   flex: 1;
+  padding: 80px;
 }
 
 .vehicle-content p {
   color: #666;
   margin-top: 16px;
   line-height: 1.6;
+
 }
 
 .vehicle-image {
@@ -872,7 +874,7 @@ a {
 }
 
 .vehicle-image img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
   border-radius: 12px;
