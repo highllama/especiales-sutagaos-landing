@@ -48,6 +48,9 @@ a {
   transition: var(--transition);
 }
 
+p {
+  font-size: 1.25rem;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -160,6 +163,261 @@ a {
   0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
   70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
   100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ============================================================
+   ENTRANCE ANIMATION SYSTEM
+   ============================================================ */
+
+/* --- Keyframes --- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flipInX {
+  from { opacity: 0; transform: perspective(600px) rotateX(-25deg); }
+  to   { opacity: 1; transform: perspective(600px) rotateX(0deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes navSlideDown {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(221, 182, 105, 0.5); }
+  50%       { box-shadow: 0 0 0 12px rgba(221, 182, 105, 0); }
+}
+
+/* --- Base hidden state --- */
+.aos {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: none;
+}
+
+.aos.is-visible {
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-duration: 0.8s;
+}
+
+/* --- Variants --- */
+.aos[data-aos='fade-up'].is-visible        { animation-name: fadeUp; }
+.aos[data-aos='fade-in'].is-visible        { animation-name: fadeIn; }
+.aos[data-aos='slide-left'].is-visible     { animation-name: slideInLeft; }
+.aos[data-aos='slide-right'].is-visible    { animation-name: slideInRight; }
+.aos[data-aos='zoom-in'].is-visible        { animation-name: zoomIn; }
+.aos[data-aos='flip-in'].is-visible        { animation-name: flipInX; }
+
+/* Stagger delays */
+.aos[data-delay='100'].is-visible  { animation-delay: 0.1s; }
+.aos[data-delay='150'].is-visible  { animation-delay: 0.15s; }
+.aos[data-delay='200'].is-visible  { animation-delay: 0.2s; }
+.aos[data-delay='300'].is-visible  { animation-delay: 0.3s; }
+.aos[data-delay='400'].is-visible  { animation-delay: 0.4s; }
+.aos[data-delay='500'].is-visible  { animation-delay: 0.5s; }
+.aos[data-delay='600'].is-visible  { animation-delay: 0.6s; }
+.aos[data-delay='700'].is-visible  { animation-delay: 0.7s; }
+.aos[data-delay='800'].is-visible  { animation-delay: 0.8s; }
+
+/* --- Navbar entrance --- */
+.navbar {
+  animation: navSlideDown 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* --- Hero content staggered --- */
+.hero-content .subtitle {
+  animation: slideInLeft 0.8s 0.2s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.hero-content > p:not(.subtitle) {
+  animation: fadeUp 0.9s 0.45s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.hero-content .btn {
+  animation: zoomIn 0.7s 0.75s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* Remove old single fadeUp on entire block */
+.hero-content {
+  animation: none;
+}
+
+/* --- Gold shimmer on hero subtitle --- */
+.hero-content .subtitle {
+  background: linear-gradient(
+    90deg,
+    var(--accent-gold) 0%,
+    var(--accent-gold-light) 40%,
+    var(--accent-gold-dark) 60%,
+    var(--accent-gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInLeft 0.8s 0.2s cubic-bezier(0.22,1,0.36,1) both,
+             shimmer 3s 1.2s linear infinite;
+}
+
+/* --- Service cards hover lift --- */
+.service-card {
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.22);
+}
+
+/* --- Gallery items hover shine --- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255,255,255,0.25) 50%,
+    transparent 70%
+  );
+  transform: skewX(-20deg);
+  transition: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  animation: galleryShine 0.55s ease forwards;
+}
+
+@keyframes galleryShine {
+  from { left: -75%; opacity: 1; }
+  to   { left: 120%;  opacity: 1; }
+}
+
+/* --- Quality ISO images hover scale --- */
+.quality-isos img {
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.35s;
+  opacity: 0.75;
+  border-radius: 8px;
+}
+
+.quality-isos img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* --- Team member card lift + gold glow --- */
+.member-frame {
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.4s ease;
+}
+
+.team-member:hover .member-frame {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45), 0 0 0 2px var(--accent-gold);
+}
+
+/* --- Client logo hover colourize --- */
+.logo-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* --- Banner divider animated background --- */
+.banner-divider {
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary) 50%,
+    var(--primary-dark) 100%
+  );
+  background-size: 200% 200%;
+  animation: bannerBg 6s ease infinite;
+}
+
+@keyframes bannerBg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Section title underline draw --- */
+.section-title-underline {
+  display: inline-block;
+  position: relative;
+}
+
+.section-title-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--accent-gold);
+  border-radius: 2px;
+  transition: width 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+
+.section-title-underline.is-visible::after {
+  width: 100%;
+}
+
+/* --- Floating WhatsApp entrance (delayed) --- */
+.floating-whatsapp-container {
+  animation: fadeUp 0.8s 1.5s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* --- Service card ripple click --- */
+@keyframes rippleEffect {
+  to { transform: scale(2.5); opacity: 0; }
 }
 
 /* Navbar */
@@ -740,7 +998,7 @@ a {
 
 .section-title-gold {
   color: var(--accent-gold-dark);
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
